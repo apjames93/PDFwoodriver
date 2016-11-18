@@ -1,0 +1,361 @@
+
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+
+  </head>
+
+  <body ng-app="app" ng-controller="primary" style = "font-family: "Arial";
+      font-size: 14px;
+      line-height: 1.2;
+      color: #333;
+      font-weight: 500;">
+
+
+
+      <div >
+        <h4 style="text-align: center;
+        margin-top: 1em;
+        margin-bottom: .25em;">
+         <b>DELEGATION AGREEMENT</b></h4>
+        <div style="border: 1px solid black;
+        padding: 5px;
+        margin-left: 1.5em;
+        margin-right: 1.5em;">
+          <p><h5><b>BLACK HILLS ENERGY RESIDENTIAL &amp; COMMERCIAL CHOICE GAS PROGRAM</b></h5></p>
+
+          <div class="row" >
+            <div class="col-xs-3">
+            <h5 style="margin-bottom: 0px;"> <b>Check Appropriate box: </b></h5>
+            </div>
+            <div class="col-xs-3 ">
+                <input type="checkbox" ng-model="nebraskaRes" value="Nebraska Residential"> Nebraska Residential
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-model="NRoneYear" value="1"> One-Year
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-model="NRtwoYear" value="2"> Two-Year
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-3">
+            </div>
+
+            <div class="col-xs-3 ">
+                <input type="checkbox" ng-model="nebraskaCom" value="Nebraska Commercial"> Nebraska Commercial
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-model="NConeYear" value="1"> One-Year
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-model="NCtwoYear" value="2"> Two-Year
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-model="NCthreeYear" value="3"> Three-Year
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-3">
+            </div>
+            <div class="col-xs-3 ">
+                <input type="checkbox" ng-model=" wyomingRes" value="Wyoming Residential"> Wyoming Residential
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-model="WRoneYear" value="1"> One-Year
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-model="WRtwoYear" value="2"> Two-Year
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-3">
+            </div>
+            <div class="col-xs-3 ">
+                <input type="checkbox" ng-model="wyomingCom" value="Wyoming Commercial"> Wyoming Commercial
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-model="WConeYear" value="1"> One-Year
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-model="WCtwoYear" value="2"> Two-Year
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-model="WCthreeYear" value="3"> Three-Year
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <div style="border: 1px solid black;
+        padding: 5px;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        margin-bottom: 1em">
+
+        <div class="row">
+            <div class="col-xs-1" style="text-align: center;">
+              <input type="checkbox" ng-model="nebraskaAgr" value="nebraska Agricultural">
+            </div>
+            <div class="col-xs-10">
+              <p>
+                <b>BLACK HILLS ENERGY NEBRASKA AGRICULTURAL CHOICE GAS PROGRAM</b>
+              </p>
+            </div>
+        </div>
+
+          <div class="row">
+            <div class="col-xs-5">
+            <b>Check Appropriate Supply Arrangement: </b>
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-model="NAoneYear" value="1"> One-Year
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-model="NAtwoYear" value="2"> Two-Year
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-model="NAthreeYear" value="3"> Three-Year
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div style="
+      padding: 5px;
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+      margin-bottom: 1em">
+        <p>I <u style="text-decoration: underline;"> {{values.fullName}} </u> (Customer) herby designate
+          <u>{{values.contractorName}}</u> (Contractor) to make a supplier and price option selection on my
+          behalf for the <u>{{values.programYears}}</u> (Program Year(s)) Choice Gas Program designated above.
+          This agreement covers the following account(s):
+        </p>
+        <br>
+        <div style="width:100%; border-bottom: 1px solid black;">
+          <p>{{values.account}}</p>
+        </div>
+      </div>
+
+
+      <div style="padding: 5px;
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+      margin-bottom: 1em">
+        <p>
+          This executed Delegation Agreement must be received by Black Hills Gas Distribution, LLC
+          d/b/a Black Hills Energy ("Black Hills Energy") as Choice Gas Program administrator
+          (Administrator) prior to the selection deadline for the applicable Choice Gas Program
+          (11:59 p.m. on [ last day of the applicable balloting period]). If the Customer submits
+          a valid Choice Gas selection prior to the Administrator receiving this Delegation Agreement,
+           the Delegation Agreement will be considered null and void.
+        </p>
+
+        <p>
+          By execution hereof, Contractor accepts its designation and appointment for the Customer and
+          agrees to act as Contractor for Customer in accordance with the terms hereof. Contractor acknowledges
+          and affirms that it is a supplier in compliance with any and all applicable statutes, rules,
+          and regulations of the governing authority and participating as a supplier in the Choice Gas
+          Program provided by Black Hills Energy to the Customer. Contractor shall clearly specify it
+          is acting within the scope of its authority on behalf of Customer in all actions taken in its
+          role of Contractor.
+        </p>
+
+        <p>
+          Customer and Contractor acknowledge that Black Hills Energy, its officers, agents, affiliates
+         and parent companies are third party beneficiaries to this Delegation Agreement and by execution
+         hereof, Customer and Contractor, individually and jointly agree to indemnify and hold Black Hills Energy,
+         its officers, agents, affiliates and parent companies harmless from any and all liabilities, losses, damages,
+          expenses and other obligations of any nature whatsoever including attorney fees incurred in defense of such
+          actions that Black Hills Energy, its officers, agents, affiliates and parent companies that
+          they may suffer either individually or collectively as a result of any and all claims,
+          demands, costs, attorney fees and judgments made against them resulting from their reliance
+          on this Delegation Agreement and/or the Contractor's actions, including but not limited to
+          actions taken by Black Hills Energy pursuant to Contractor's actions or inaction under this Agreement.
+        </p>
+
+        <p>
+          Customer agrees to select Contractor as its gas supplier under Black Hills Energy's
+          Choice Gas Program, and Customer hereby appoints Contractor to submit Customer's Black Hills
+          Energy Choice Gas selection in order to facilitate the parties' performance under this agreement.
+        </p>
+
+        <p>The parties acknowledge that receipt by Administrator of an executed Delegation Agreement
+           transmitted by mail, facsimile, electronic delivery, or other recognized means of delivery,
+          shall constitute a valid enforceable agreement and shall legally bind the parties accordingly.
+          Once executed, it may not be revoked by the Customer.
+        </p>
+
+        <p>
+          This agreement expires at the end of the Program Year(s) stated above.
+        </p>
+
+      </div>
+
+      <br>
+
+      <div class="row" style="padding: 5px;
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+      ">
+        <div class="col-xs-1">
+          By:
+        </div>
+        <div class="col-xs-5" style= "border-bottom: 1px solid black;
+        height: 1em;
+        width: 20em;">
+          {{values.signature.signature}}
+        </div>
+
+        <div class="col-xs-1">
+          By:
+        </div>
+        <div class="col-xs-5" style= "border-bottom: 1px solid black;
+        height: 1em;
+        width: 20em;">
+          {{values.contractorName}}
+        </div>
+      </div>
+
+      <div class="row" style="padding: 5px;
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+      ">
+        <div class="col-xs-5" style= "text-align: center;">
+          <p>
+            (Customer Signature)
+          </p>
+        </div>
+
+        <div class="col-xs-5" style= "text-align: center;">
+          <p>
+            (Contractor Signature)
+          </p>
+        </div>
+      </div>
+
+      <div class="row" style="padding: 5px;
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+      ">
+        <div class="col-xs-1">
+          Name:
+        </div>
+        <div class="col-xs-5" style= "border-bottom: 1px solid black;
+        height: 1em;
+        width: 20em;">
+          {{values.fullName}}
+        </div>
+
+        <div class="col-xs-1">
+          Name:
+        </div>
+        <div class="col-xs-5" style= "border-bottom: 1px solid black;
+        height: 1em;
+        width: 20em;">
+          {{values.contractorName}}
+        </div>
+      </div>
+      <div class="row" style="padding: 5px;
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+      margin-bottom: 1em">
+        <div class="col-xs-5" style= "text-align: center;">
+          <p>
+            (Customer Print Name)
+          </p>
+        </div>
+        <div class="col-xs-5" style= "text-align: center;">
+          <p>
+            (Contractor Print Name)
+          </p>
+        </div>
+      </div>
+      <div class="row" style="padding: 5px;
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+      margin-bottom: 1em">
+        <div class="col-xs-1">
+          Title:
+        </div>
+        <div class="col-xs-5" style= "border-bottom: 1px solid black;
+        height: 1em;
+        width: 20em;">
+        </div>
+        <div class="col-xs-1">
+          Title:
+        </div>
+        <div class="col-xs-5" style= "border-bottom: 1px solid black;
+        height: 1em;
+        width: 20em;">
+        </div>
+      </div>
+      <div class="row" style="padding: 5px;
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+      margin-bottom: 1em">
+        <div class="col-xs-1">
+          Adress:
+        </div>
+        <div class="col-xs-5" style= "border-bottom: 1px solid black;
+        height: 1em;
+        width: 20em;">
+        </div>
+      </div>
+      <div class="row" style="padding: 5px;
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+      margin-bottom: 1em">
+        <div class="col-xs-8" style= "border-bottom: 1px solid black;
+        height: 1em;
+        width: 25em;
+        margin-left: 1em;">
+        </div>
+      </div>
+      <div class="row" style="padding: 5px;
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+      margin-bottom: 1em">
+        <div class="col-xs-1">
+          Phone No:
+        </div>
+        <div class="col-xs-4" style= "border-bottom: 1px solid black;
+        height: 1em;
+        width: 20em;">
+          {{values.fullName}}
+        </div>
+      </div>
+      <div class="row" style="padding: 5px;
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+      margin-bottom: 1em">
+        <div class="col-xs-1">
+          Date:
+        </div>
+        <div class="col-xs-5" style= "border-bottom: 1px solid black;
+        height: 1em;
+        width: 20em;">
+        {{formatDate(values.signature.date)}}
+        </div>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+      <script>
+        angular
+          .module("app", [])
+          .controller("primary", function ($scope) {
+            $scope.values = document.values;
+            $scope.formatDate = function(date) {
+              console.log('Formatting: ', date);
+              return new Date(date).toDateString();
+            }
+          });
+      </script>
+  </body>

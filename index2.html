@@ -1,0 +1,60 @@
+<body ng-app="app" ng-controller="primary">
+
+  <script src="https://code.angularjs.org/1.2.7/angular.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <script>
+    angular
+      .module("app", [])
+      .controller("primary", function ($scope) {
+        $scope.values = document.values;
+        $scope.formatDate = function(date) {
+          console.log('Formatting: ', date);
+          return new Date(date).toDateString();
+        }
+      });
+  </script>
+
+
+
+
+
+
+
+
+
+  <div style="">
+    <h2 style="text-align: center;">DELEGATION AGREEMENT</h2>
+    <div style="border: 1px solid black; padding: 5px;">
+      <p><b>BLACK HILLS ENERGY RESIDENTIAL &amp; COMMERCIAL CHOICE GAS PROGRAM</b></p>
+      <p>Nebraska Commercial, Two-Year</p>
+    </div>
+    <br>
+    <div style="border: 1px solid black; padding: 5px;">
+      <p><b>BLACK HILLS ENERGY NEBRASKA AGRICULTURAL CHOICE GAS PROGRAM</b></p>
+      <p>Two-Year Suplement Program</p>
+    </div>
+    <p>I <u>{{values.fullName}}</u> (Customer) herby designate <u>{{values.contractorName}}</u> (Contractor) to make a supplier and price option selection on my behalf for the <u>{{values.programYears}}</u> (Program Year(s)) Choice Gas Program designated above. This agreement
+      covers the following account(s):</p>
+    <div style="width:100%; border-bottom: 1px solid black;">
+      <p>{{values.account}}</p>
+    </div>
+
+    <p>This executed Delegation Agreement must be received by Black Hills Gas Distribution, LLC d/b/a Black Hills Energy ("Black Hills Energy") as Choice Gas Program administrator (Administrator) prior to the selection deadline for the applicable Choice Gas Program (11:59 p.m. on [ last day of the applicable balloting period]). If the Customer submits a valid Choice Gas selection prior to the Administrator receiving this Delegation Agreement, the Delegation Agreement will be considered null and void.
+    </p>
+
+    <p>By execution hereof, Contractor accepts its designation and appointment for the Customer and agrees to act as Contractor for Customer in accordance with the terms hereof. Contractor acknowledges and affirms that it is a supplier in compliance with any and all applicable statutes, rules, and regulations of the governing authority and participating as a supplier in the Choice Gas Program provided by Black Hills Energy to the Customer. Contractor shall clearly specify it is acting within the scope of its authority on behalf of Customer in all actions taken in its role of Contractor.</p>
+
+    <p>Customer and Contractor acknowledge that Black Hills Energy, its officers, agents, affiliates and parent companies are third party beneficiaries to this Delegation Agreement and by execution hereof, Customer and Contractor, individually and jointly agree to indemnify and hold Black Hills Energy, its officers, agents, affiliates and parent companies harmless from any and all liabilities, losses, damages, expenses and other obligations of any nature whatsoever including attorney fees incurred in defense of such actions that Black Hills Energy, its officers, agents, affiliates and parent companies that they may suffer either individually or collectively as a result of any and all claims, demands, costs, attorney fees and judgments made against them resulting from their reliance on this Delegation Agreement and/or the Contractor's actions, including but not limited to actions taken by Black Hills Energy pursuant to Contractor's actions or inaction under this Agreement.</p>
+
+    <p>Customer agrees to select Contractor as its gas supplier under Black Hills Energy's Choice Gas Program, and Customer hereby appoints Contractor to submit Customer's Black Hills Energy Choice Gas selection in order to facilitate the parties' performance under this agreement.</p>
+
+    <p>The parties acknowledge that receipt by Administrator of an executed Delegation Agreement transmitted by mail, facsimile, electronic delivery, or other recognized means of delivery, shall constitute a valid enforceable agreement and shall legally bind the parties accordingly. Once executed, it may not be revoked by the Customer.</p>
+
+    <p>This agreement expires at the end of the Program Year(s) stated above.</p>
+
+    <br>
+
+    <div style="font-family: 'Great Vibes'; font-size: 3em;">{{values.signature.signature}}</div>
+    <div style="font-family: 'Great Vibes';">{{formatDate(values.signature.date)}}</div>
+
+</body>
