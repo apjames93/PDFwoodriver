@@ -1,7 +1,7 @@
 
 <body ng-app="app" ng-controller="primary" style = "font-family: 'Arial';
       font-size: 12px;
-      line-height: 1.2;
+      line-height: 1;
       color: #333;
       font-weight: 500;">
 
@@ -11,7 +11,7 @@
 
   </head>
 
-  <body ng-app="app" ng-controller="primary" style = "font-family: "Arial";
+  <body ng-app="app" ng-controller="primary" class="text-justify" style = "font-family: "Arial";
       font-size: 14px;
       line-height: 1.2;
       color: #333;
@@ -25,74 +25,73 @@
         margin-bottom: .1em;">
          <b>DELEGATION AGREEMENT</b></h4>
         <div style="border: 1px solid black;
-        padding: 5px;
         margin-left: 1.5em;
         margin-right: 1.5em;">
           <p><h5><b>BLACK HILLS ENERGY RESIDENTIAL &amp; COMMERCIAL CHOICE GAS PROGRAM</b></h5></p>
+          <div class="col-xs-3">
+          <h5 style=""> <b>Check Appropriate box: </b></h5>
+          </div>
+          <div class="row" >
+            <div class="col-xs-3 ">
+                <input type="checkbox" ng-checked="nebraskaResidentialProgram()" ng-model="nebraskaResidential" value="Nebraska Residential"> Nebraska Residential
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-checked="nebraskaResidentialOneYear"  ng-model="nebraskaResidential.oneYear" value="1"> One-Year
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-checked="nebraskaResidentialTwoYear" ng-model="nebraskaResidential.twoYear" value="2"> Two-Year
+            </div>
+          </div>
+
 
           <div class="row" >
             <div class="col-xs-3">
-            <h5 style="margin-bottom: .2px;"> <b>Check Appropriate box: </b></h5>
             </div>
             <div class="col-xs-3 ">
-                <input type="checkbox" ng-model="nebraskaRes" value="Nebraska Residential"> Nebraska Residential
+                <input type="checkbox" ng-checked='nebraskaCommercialProgram()' ng-model="nebraskaCommercial" value="Nebraska Residential"> Nebraska Commercial
             </div>
             <div class="col-xs-2 ">
-                <input type="checkbox" ng-model="NRoneYear" value="1"> One-Year
+                <input type="checkbox" ng-checked="nebraskaCommercialOneYear"  ng-model="nebraskaCommercial.oneYear" value="1"> One-Year
             </div>
             <div class="col-xs-2 ">
-                <input type="checkbox" ng-model="NRtwoYear" value="2"> Two-Year
+                <input type="checkbox" ng-checked="nebraskaCommercialTwoYear" ng-model="nebraskaCommercial.twoYear" value="2"> Two-Year
+            </div>
+            <div class="col-xs-2 ">
+                <input type="checkbox" ng-checked="nebraskaCommercialThreeYear" ng-model="nebraskaCommercial.ThreeYear" value="3"> Three-Year
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-xs-3">
-            </div>
-
-            <div class="col-xs-3 ">
-                <input type="checkbox" ng-model="nebraskaCom" value="Nebraska Commercial"> Nebraska Commercial
-            </div>
-            <div class="col-xs-2 ">
-                <input type="checkbox" ng-model="NConeYear" value="1"> One-Year
-            </div>
-            <div class="col-xs-2 ">
-                <input type="checkbox" ng-model="NCtwoYear" value="2"> Two-Year
-            </div>
-            <div class="col-xs-2 ">
-                <input type="checkbox" ng-model="NCthreeYear" value="3"> Three-Year
-            </div>
-          </div>
-
-          <div class="row">
+          <div class="row" >
             <div class="col-xs-3">
             </div>
             <div class="col-xs-3 ">
-                <input type="checkbox" ng-model=" wyomingRes" value="Wyoming Residential"> Wyoming Residential
+                <input type="checkbox" ng-checked='wyomingResidentialProgram()' ng-model="wyomingResidential" value="Wyoming Residential"> Wyoming Residential
             </div>
             <div class="col-xs-2 ">
-                <input type="checkbox" ng-model="WRoneYear" value="1"> One-Year
+                <input type="checkbox" ng-checked="wyomingResidentialOneYear"  ng-model="wyomingResidential.oneYear" value="1"> One-Year
             </div>
             <div class="col-xs-2 ">
-                <input type="checkbox" ng-model="WRtwoYear" value="2"> Two-Year
+                <input type="checkbox" ng-checked="wyomingResidentialTwoYear" ng-model="wyomingResidential.twoYear" value="2"> Two-Year
             </div>
           </div>
 
-          <div class="row">
+          <div class="row" >
             <div class="col-xs-3">
             </div>
             <div class="col-xs-3 ">
-                <input type="checkbox" ng-model="wyomingCom" value="Wyoming Commercial"> Wyoming Commercial
+                <input type="checkbox" ng-checked='wyomingCommercialProgram()' ng-model="wyomingCommercial" value="Wyoming Commercial"> Wyoming Commercial
             </div>
             <div class="col-xs-2 ">
-                <input type="checkbox" ng-model="WConeYear" value="1"> One-Year
+                <input type="checkbox" ng-checked="wyomingCommercialOneYear"  ng-model="wyomingCommercial.oneYear" value="1"> One-Year
             </div>
             <div class="col-xs-2 ">
-                <input type="checkbox" ng-model="WCtwoYear" value="2"> Two-Year
+                <input type="checkbox" ng-checked="wyomingCommercialTwoYear" ng-model="wyomingCommercial.twoYear" value="2"> Two-Year
             </div>
             <div class="col-xs-2 ">
-                <input type="checkbox" ng-model="WCthreeYear" value="3"> Three-Year
+                <input type="checkbox" ng-checked="wyomingCommercialThreeYear" ng-model="wyomingCommercial.threeyear" value="2"> Three-Year
             </div>
           </div>
+        </div>
         </div>
         <br>
 
@@ -104,7 +103,7 @@
 
         <div class="row">
             <div class="col-xs-1" style="text-align: center;">
-              <input type="checkbox" ng-model="nebraskaAgr" value="nebraska Agricultural">
+              <input type="checkbox" ng-checked="nebraskaAgriculturalProgram()" ng-model="nebraskaAgricultural" value="nebraska Agricultural">
             </div>
             <div class="col-xs-10">
               <p>
@@ -118,13 +117,12 @@
             <b>Check Appropriate Supply Arrangement: </b>
             </div>
             <div class="col-xs-2 ">
-                <input type="checkbox" ng-model="NAoneYear" value="1"> One-Year
+  <input type="checkbox" ng-checked='nebraskaAgriculturalOneYear'ng-model="nebraskaAgricultural" value="1"> One-Year            </div>
+            <div class="col-xs-2 ">
+              <input type="checkbox" ng-checked="nebraskaAgriculturalTwoYear" value="2"> Two-Year
             </div>
             <div class="col-xs-2 ">
-                <input type="checkbox" ng-model="NAtwoYear" value="2"> Two-Year
-            </div>
-            <div class="col-xs-2 ">
-                <input type="checkbox" ng-model="NAthreeYear" value="3"> Three-Year
+              <input type="checkbox" ng-checked="nebraskaAgriculturalThreeYear" value="3"> Three-Year
             </div>
 
           </div>
@@ -199,6 +197,13 @@
 
         <p>
           This agreement expires at the end of the Program Year(s) stated above.
+        </p>
+
+      </div>
+      <div class="">
+        <p>
+          By signing this Agreement, Contractor represents and warrants that Contractor has provided a complete and true copy of this Delegation Agreement to
+          Customer. By signing this Agreement, Customer acknowledges receipt of a complete copy of this Delegation Agreement from Contractor.
         </p>
 
       </div>
@@ -319,6 +324,7 @@ margin-bottom: .1em">
     </div>
   </div>
 </div>
+<button ng-click='program()'type="button" name="button"></button>
 
 
       <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
@@ -326,13 +332,110 @@ margin-bottom: .1em">
 
       <script>
         angular
-          .module("app", [])
-          .controller("primary", function ($scope) {
+          .module('app', [])
+          .controller('primary', function ($scope) {
             $scope.values = document.values;
             $scope.formatDate = function(date) {
               console.log('Formatting: ', date);
               return new Date(date).toDateString();
-            }
+            };
+
+
+            $scope.nebraskaResidentialProgram = function() {
+              var data = {
+                state: 'Nebraska',
+                billClass: 'Residential',
+                term: 'one Year'
+              };
+              if (data.state && data.billClass === 'Residential' && 'Nebraska') {
+                $scope.nebraskaResidential = true;
+              }
+              if (data.term === 'one Year') {
+                $scope.nebraskaResidentialOneYear = true;
+              }
+              if (data.term === 'two Year') {
+                $scope.nebraskaResidentialTwoYear = true;
+              }
+            };
+
+            $scope.nebraskaCommercialProgram = function() {
+              var data = {
+                state: 'Nebraska',
+                billClass: 'Commercial',
+                term: 'three Year'
+              };
+              if (data.state && data.billClass === 'Commercial' && 'Nebraska') {
+                $scope.nebraskaCommercial = true;
+              }
+              if (data.term === 'one Year') {
+                $scope.nebraskaCommercialOneYear = true;
+              }
+              if (data.term === 'two Year') {
+                $scope.nebraskaCommercialTwoYear = true;
+              }
+              if (data.term === 'three Year') {
+                $scope.nebraskaCommercialThreeYear = true;
+              }
+            };
+
+            $scope.wyomingResidentialProgram = function() {
+              var data = {
+                state: 'Wyoming',
+                billClass: 'Residential',
+                term: 'two Year'
+              };
+              if (data.state && data.billClass === 'Residential' && 'Wyoming') {
+                $scope.wyomingResidential = true;
+              }
+              if (data.term === 'one Year') {
+                $scope.wyomingResidentialOneYear = true;
+              }
+              if (data.term === 'two Year') {
+                $scope.wyomingResidentialTwoYear = true;
+              }
+            };
+
+            $scope.wyomingCommercialProgram = function() {
+              var data = {
+                state: 'Wyoming',
+                billClass: 'Commercial',
+                term: 'three Year'
+              };
+              if (data.state && data.billClass === 'Commercial' && 'Wyoming') {
+                $scope.wyomingCommercial = true;
+              }
+              if (data.term === 'one Year') {
+                $scope.wyomingCommercialOneYear = true;
+              }
+              if (data.term === 'two Year') {
+                $scope.wyomingCommercialTwoYear = true;
+              }
+              if (data.term === 'three Year') {
+                $scope.wyomingCommercialThreeYear = true;
+              }
+            };
+
+
+            $scope.nebraskaAgriculturalProgram = function() {
+              var data = {
+                state: 'Nebraska',
+                billClass: 'Agricultural',
+                term: 'three Year'
+              };
+              if (data.state && data.billClass === 'Agricultural' && 'Nebraska') {
+                $scope.nebraskaAgricultural = true;
+              }
+              if (data.term === 'one Year') {
+                $scope.nebraskaAgriculturalOneYear = true;
+              }
+              if (data.term === 'two Year') {
+                $scope.nebraskaAgriculturalTwoYear = true;
+              }
+              if (data.term === 'three Year') {
+                $scope.nebraskaAgriculturalThreeYear = true;
+              }
+            };
+
           });
       </script>
   </body>
